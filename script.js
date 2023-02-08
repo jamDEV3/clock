@@ -25,7 +25,7 @@ function time() {
         am_pm = "PM";
     }
     if (hour == 0) {
-        hr = 12;
+        hour = 12;
         am_pm = "AM";
     }
 
@@ -43,6 +43,10 @@ function time() {
     currentTime = hour + ":" + min + ":" + sec;
     clockDisplay.innerHTML = currentTime;
     }
+
+    else if (clockDisplay.className == 'analog') {
+        
+    }
 }
 
 
@@ -52,6 +56,10 @@ function twelve() {
 
 function twentyFour() {
     clockDisplay.className = "twentyFour";
+}
+
+function analog() {
+    clockDisplay.className = "analog";
 }
 
 time();
