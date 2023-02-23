@@ -10,7 +10,7 @@ function time() {
     let hour = date.getHours();
     let min = date.getMinutes();
     let sec = date.getSeconds();
-    let am_pm;
+    let am_pm = "AM";
     let currentTime;
 
     if ((clockDisplay.className == 'twelve') || (clockDisplay.className == 'time')) {
