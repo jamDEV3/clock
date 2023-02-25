@@ -8,12 +8,14 @@
     <title>Clock</title>
 </head>
 <body>
-    <div id="display" class="time">
+    <!-- <canvas id="analogClock" width="200" height="200"></canvas> -->
+    <div id="mode"></div>
+    <div id="display" class="twelve">
     </div>
     
     <div>
         <input type="button" value="Analog Clock" onclick="analog();"/>
-        <input type="button" value="Digital Clock"/>
+        <input type="button" value="Digital Clock" onclick="digital();"/>
     </div>
 
     <div>
