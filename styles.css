@@ -1,0 +1,17 @@
+#display {
+    display: flex;     
+    justify-content: center;       
+    align-content: space-around; 
+    background-color: black;
+    color: aqua;
+    font-size: 200%;
+    font-family: 'Century Gothic';
+          	
+}
+ .buttons {
+    display: flex;     
+    justify-content: center;       
+    align-content: space-around;
+    font-family: 'Century Gothic';
+    padding-top: 10px;
+ }
