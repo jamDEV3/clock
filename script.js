@@ -70,17 +70,96 @@ function analog() {
 
     analogClock = document.createElement("canvas");
     analogClock.id = "analogClock";
-    analogClock.width = 200;
-    analogClock.height = 200;
-    document.body.appendChild(analogClock);
+    analogClock.width = 360;
+    analogClock.height = 360;
+    document.body.prepend(analogClock);
 
     canvas = document.getElementById("analogClock");
 
     ctx = canvas.getContext("2d");
 
     ctx.beginPath();
-    ctx.arc(100, 100, 100, 0, 2 * Math.PI);
+    ctx.lineWidth = 10;
+    ctx.arc(180, 180, 150, 0, 2 * Math.PI);
     ctx.stroke();
+
+    ctx.beginPath();
+    ctx.arc(180, 180, 1, 0, 2 * Math.PI);
+    ctx.stroke();
+
+    // North
+    ctx.beginPath();
+    ctx.lineWidth = 8;
+    ctx.moveTo(180, 45);
+    ctx.lineTo(180, 75);
+    ctx.stroke();
+
+    // North East 1
+    ctx.beginPath();
+    ctx.moveTo(250, 65);
+    ctx.lineTo(242, 80);
+    ctx.stroke();
+
+    // North East 2
+    ctx.beginPath();
+    ctx.moveTo(297, 114);
+    ctx.lineTo(282, 121);
+    ctx.stroke();
+
+    // East
+    ctx.beginPath();
+    ctx.moveTo(315, 180);
+    ctx.lineTo(285, 180);
+    ctx.stroke();
+
+    // South East 1
+    ctx.beginPath();
+    ctx.moveTo(297, 246);
+    ctx.lineTo(282, 239);
+    ctx.stroke();
+
+    // South East 2
+    ctx.beginPath();
+    ctx.moveTo(250, 295);
+    ctx.lineTo(242, 280);
+    ctx.stroke();
+
+    // South
+    ctx.beginPath();
+    ctx.moveTo(180, 285);
+    ctx.lineTo(180, 315);
+    ctx.stroke();
+
+    // South West 1
+    ctx.beginPath();
+    ctx.moveTo(110, 295);
+    ctx.lineTo(118, 280);
+    ctx.stroke();
+
+    // South West 2
+    ctx.beginPath();
+    ctx.moveTo(63, 246);
+    ctx.lineTo(78, 239);
+    ctx.stroke();
+    
+    // West
+    ctx.beginPath();
+    ctx.moveTo(45, 180);
+    ctx.lineTo(75, 180);
+    ctx.stroke();
+
+    // North West 1
+    ctx.beginPath();
+    ctx.moveTo(110, 65);
+    ctx.lineTo(118, 80);
+    ctx.stroke();
+
+    // North West 2
+    ctx.beginPath();
+    ctx.moveTo(63, 114);
+    ctx.lineTo(78, 121);
+    ctx.stroke();
+
 
 }
 
