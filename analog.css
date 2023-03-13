@@ -1,0 +1,56 @@
+#clock {
+    position: relative;
+    margin:auto;
+    height: 40vw;
+    width: 40vw;
+    background: url(images/1000_F_267215373_5R3x1Og7QVtvazHyjuRNKpM7GO6rf9ja.jpg) no-repeat;
+    background-size: 100%;
+}
+
+#hours, #minutes, #seconds {
+    position: absolute;    
+    border-radius: 10px;
+    
+    transform-origin: bottom;
+    vertical-align: bottom;
+}
+
+#hours {
+    width: 1.3%;
+    height: 15%;
+    top: 25%;
+    left: 49%;
+    opacity: 0.8;
+    background: black;
+    margin-top: 52px;
+    
+}
+
+#minutes {
+    margin-top: 32px;
+    width: 1.3%;
+    height: 19%;
+    top: 25%;
+    left: 49%;
+    opacity: 0.8;
+    background: green;
+    
+}
+
+#seconds {
+    margin-top: -2px;
+    width: 1.3%;
+    height: 26%;
+    top: 25%;
+    left: 49%;
+    opacity: 0.8;
+    background: red;
+}
+
+.buttons {
+    display: flex;     
+    justify-content: center;       
+    align-content: space-around;
+    font-family: 'Century Gothic';
+    padding-top: 10px;
+ }
