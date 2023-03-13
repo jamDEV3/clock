@@ -1,5 +1,8 @@
 #display {
-    display: flex;     
+    
+    display: flex;    
+    width: 40vw;   
+    margin: auto;
     justify-content: center;       
     align-content: space-around; 
     background-color: black;

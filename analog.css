@@ -1,4 +1,5 @@
 #clock {
+    display: block;
     position: relative;
     margin:auto;
     height: 40vw;
@@ -9,11 +10,21 @@
 
 #hours, #minutes, #seconds {
     position: absolute;    
-    border-radius: 10px;
-    
+    border-radius: 10px;    
     transform-origin: bottom;
     vertical-align: bottom;
 }
+
+#pin {  
+    position: absolute;  
+    background: black;
+    border-radius: 50%;
+    width: 4.5%;
+    height: 4.5%;
+    left: 47.7%;
+    top: 47.8%;
+    opacity: 0.9;
+ }
 
 #hours {
     width: 1.3%;
@@ -22,27 +33,27 @@
     left: 49%;
     opacity: 0.8;
     background: black;
-    margin-top: 52px;
+    margin-top: 9.6%;
     
 }
 
 #minutes {
-    margin-top: 32px;
+    margin-top: 6%;
     width: 1.3%;
     height: 19%;
     top: 25%;
-    left: 49%;
+    left: 49.5%;
     opacity: 0.8;
     background: green;
     
 }
 
 #seconds {
-    margin-top: -2px;
+    margin-top: -1.1%;
     width: 1.3%;
     height: 26%;
     top: 25%;
-    left: 49%;
+    left: 49.5%;
     opacity: 0.8;
     background: red;
 }
@@ -54,3 +65,4 @@
     font-family: 'Century Gothic';
     padding-top: 10px;
  }
+
