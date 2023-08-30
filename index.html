@@ -8,13 +8,17 @@
     <title>Clock</title>
 </head>
 <body>
-    <div id="mode"></div>
-    <div id="display" class="twelve">
+    <div id="mode">
+        <div class="hand hour-hand"></div>
+        <div class="hand min-hand"></div>
+        <div class="hand second-hand"></div>
     </div>
     
+    <div id="display" class="twelve"></div>
+
     <div>
-        <input type="button" value="Analog Clock" onclick="analog();"/>
         <input type="button" value="Digital Clock" onclick="digital();"/>
+        <input type="button" value="Analog Clock" onclick="analog();"/>
     </div>
 
     <div>

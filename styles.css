@@ -1,0 +1,39 @@
+#mode {
+    display: flex;
+    justify-content: center;
+}
+
+.hand {
+    width: 50%;
+    right: 50%;
+    height: 6px;
+    background: #61afff;
+    position: absolute;
+    top: 35%;
+    border-radius: 6px;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
+  
+  canvas {
+    width: 34.5%;
+  }
+
+  .hand.hour-hand {
+    width: 5%;
+    z-index: 3;
+  }
+  
+  .hand.min-hand {
+    height: 3px;
+    z-index: 10;
+    width: 10%;
+  }
+  
+  .hand.second-hand {
+    background: #ee791a;
+    width: 13%;
+    height: 2px;
+  }
+  

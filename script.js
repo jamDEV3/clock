@@ -1,6 +1,12 @@
 let clockDisplay = document.getElementById('display');
 let clockMode = document.getElementById('mode');
 
+let analogClock = document.createElement("canvas");
+
+const secondHand = document.querySelector('.second-hand');
+const minHand = document.querySelector('.min-hand');
+const hourHand = document.querySelector('.hour-hand');
+
 function time() {
 
     // Executes function every second
@@ -13,6 +19,15 @@ function time() {
     let sec = date.getSeconds();
     let am_pm = "AM";
     let currentTime;
+
+    const secondDegrees = ((sec / 60) * 360) + 90;
+    secondHand.style.transform = `rotate(${secondDegrees}deg)`;
+
+    const minDegrees = ((min / 60) * 360) + ((sec / 60)*6) + 90;
+    minHand.style.transform = `rotate(${minDegrees}deg)`;
+
+    const hourDegrees = ((hour / 12) * 360) + ((min / 60) * 30) + 90;
+    hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 
     //Default time display on startup
     if (clockDisplay.className == 'twelve') {
@@ -67,14 +82,15 @@ function twentyFour() {
 
 function analog() {
     clockMode.className = "analog";
-
-    analogClock = document.createElement("canvas");
     analogClock.id = "analogClock";
     analogClock.width = 360;
     analogClock.height = 360;
-    document.body.prepend(analogClock);
+    
+    clockMode.appendChild(analogClock);
 
     canvas = document.getElementById("analogClock");
+
+    checkCanvas = document.body.contains(canvas);
 
     ctx = canvas.getContext("2d");
 
