@@ -1,16 +1,17 @@
 let clockDisplay = document.getElementById('display');
 let clockMode = document.getElementById('mode');
 
+let secondHand = document.getElementById("sec");
+let minHand = document.getElementById("min");
+let hourHand = document.getElementById("hour");
+
 let analogClock = document.createElement("canvas");
 
-const secondHand = document.querySelector('.second-hand');
-const minHand = document.querySelector('.min-hand');
-const hourHand = document.querySelector('.hour-hand');
+secondHand.style.display = "none";
+minHand.style.display = "none";
+hourHand.style.display = "none";
 
 function time() {
-
-    // Executes function every second
-    setInterval(time, 1);
 
     // Declares time properties
     let date = new Date();
@@ -20,13 +21,13 @@ function time() {
     let am_pm = "AM";
     let currentTime;
 
-    const secondDegrees = ((sec / 60) * 360) + 90;
+    let secondDegrees = ((sec / 60) * 360) + 90;
     secondHand.style.transform = `rotate(${secondDegrees}deg)`;
 
-    const minDegrees = ((min / 60) * 360) + ((sec / 60)*6) + 90;
+    let minDegrees = ((min / 60) * 360) + ((sec / 60)*6) + 90;
     minHand.style.transform = `rotate(${minDegrees}deg)`;
 
-    const hourDegrees = ((hour / 12) * 360) + ((min / 60) * 30) + 90;
+    let hourDegrees = ((hour / 12) * 360) + ((min / 60) * 30) + 90;
     hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 
     //Default time display on startup
@@ -176,12 +177,20 @@ function analog() {
     ctx.lineTo(78, 121);
     ctx.stroke();
 
+    secondHand.style.display = "block";
+    minHand.style.display = "block";
+    hourHand.style.display = "block";
 
 }
 
 function digital() {
     clockMode.className = "digital";
     canvas.remove();
+    secondHand.style.display = "none";
+    minHand.style.display = "none";
+    hourHand.style.display = "none";
 }
 
 time();
+// Executes function every second
+setInterval(time, 1000);

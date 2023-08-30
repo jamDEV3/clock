@@ -9,7 +9,7 @@
     height: 6px;
     background: #61afff;
     position: absolute;
-    top: 35%;
+    top: 30%;
     border-radius: 6px;
     transform-origin: 100%;
     transform: rotate(90deg);
@@ -17,23 +17,23 @@
   }
   
   canvas {
-    width: 34.5%;
+    margin-top: 100px;
   }
 
   .hand.hour-hand {
-    width: 5%;
+    width: 70px;
     z-index: 3;
   }
   
   .hand.min-hand {
     height: 3px;
     z-index: 10;
-    width: 10%;
+    width: 100px;
   }
   
   .hand.second-hand {
     background: #ee791a;
-    width: 13%;
+    width: 130px;
     height: 2px;
   }
   
