@@ -1,11 +1,10 @@
 #clock {
-    display: block;
+    /* display: flex;
+    justify-content: center; */
     position: relative;
     margin:auto;
     height: 40vw;
     width: 40vw;
-    background: url(images/1000_F_267215373_5R3x1Og7QVtvazHyjuRNKpM7GO6rf9ja.jpg) no-repeat;
-    background-size: 100%;
 }
 
 #hours, #minutes, #seconds {
