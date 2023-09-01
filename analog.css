@@ -1,10 +1,12 @@
 #clock {
-    /* display: flex;
-    justify-content: center; */
     position: relative;
     margin:auto;
     height: 40vw;
     width: 40vw;
+}
+
+canvas {
+    width: 100%;
 }
 
 #hours, #minutes, #seconds {

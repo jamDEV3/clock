@@ -23,16 +23,15 @@ function time() {
 }
 
 function drawClock() {
-
     canvas = document.getElementById("analogClock");
     clock = document.getElementById("clock");
+
+    // Changes canvas perimeter size
+    analogClock.width = 360;
+    analogClock.height = 360;
     
 
     ctx = canvas.getContext("2d");
-
-    ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
-
-    
 
     ctx.beginPath();
     ctx.lineWidth = 10;
