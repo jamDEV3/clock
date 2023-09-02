@@ -7,25 +7,33 @@
     <link rel="stylesheet" href="styles.css">
     <title>Clock</title>
 </head>
-<body>
+<body style="display: flex; justify-content: center;">
+    <div class="container" style="display: flex; justify-content: center;">
+        <div id="mode"></div>
 
-    <div id="mode"></div>
+        <div>
+            <div id="display" class="twelve">
+            </div>
 
-    <div id="display" class="twelve">
-    </div>
-
-    <div id="clock">
-        <div id="hours"></div>
-        <div id="minutes"></div>
-        <div id="seconds"></div>
-        <div id="pin"></div>
-    </div>
-    
-    <div class = "buttons">
-        <input type="button" value="Digital Clock" onclick="digital();">
-        <input type="button" value="Analog Clock" onclick="analog();"/>        
-        <input type="button" value="12 hour" onclick="twelve();"/>
-        <input type="button" value="24 hour" onclick="twentyFour();"/>
+            <div id="clock">
+                <div id="hours"></div>
+                <div id="minutes"></div>
+                <div id="seconds"></div>
+                <div id="pin"></div>
+            </div>
+        </div>
+        
+        <div class = "buttons">
+            <div style="display: flex; flex-direction: column; margin: 20px; width: 200px;">
+                <input type="button" value="DIGITAL" onclick="digital();"/>
+                <input type="button" value="ANALOG" onclick="analog();"/>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; margin: 20px; width: 200px;">
+                <input id="12" type="button" value="12 HOUR" onclick="twelve();"/>
+                <input id="24" type="button" value="24 HOUR" onclick="twentyFour();"/>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

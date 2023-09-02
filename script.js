@@ -7,6 +7,9 @@ let seconds = document.getElementById('seconds');
 let hours = document.getElementById('hours');
 let pin = document.getElementById('pin');
 
+let twelveHour = document.getElementById('12');
+let twentyFourHour = document.getElementById('24');
+
 let analogClock = document.createElement("canvas");
 
 seconds.style.display = "none";
@@ -28,7 +31,7 @@ function time() {
     let am_pm = "AM";
     let currentTime;
 
-    if ((clockDisplay.className == 'twelve') || (clockDisplay.className == 'time')) {
+    if ((clockDisplay.className == 'twelve')) {
     
     // Makes sure 2 digits appear for each time partition
     hour = hour < 10 ? "0" + hour: hour;
@@ -187,6 +190,9 @@ function analog() {
     hours.style.display = "block";
     minutes.style.display = "block";
     pin.style.display = "block";
+    clockDisplay.style.display = "none";
+    document.getElementById('12').disabled = true;
+    document.getElementById('24').disabled = true;
 
 }
 
@@ -197,6 +203,9 @@ function digital() {
     minutes.style.display = "none";
     hours.style.display = "none";
     pin.style.display = "none";
+    clockDisplay.style.display = "flex";
+    document.getElementById('12').disabled = false;
+    document.getElementById('24').disabled = false;
 }
 
 time();
