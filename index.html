@@ -8,11 +8,22 @@
     <title>Clock</title>
 </head>
 <body>
-    <div id="display" class="time">
+
+    <div id="mode"></div>
+
+    <div id="display" class="twelve">
+    </div>
+
+    <div id="clock">
+        <div id="hours"></div>
+        <div id="minutes"></div>
+        <div id="seconds"></div>
+        <div id="pin"></div>
     </div>
     
     <div class = "buttons">
-        <input type="button" value="Analog Clock" onclick="window.location.href='analog.html'"/>        
+        <input type="button" value="Digital Clock" onclick="digital();">
+        <input type="button" value="Analog Clock" onclick="analog();"/>        
         <input type="button" value="12 hour" onclick="twelve();"/>
         <input type="button" value="24 hour" onclick="twentyFour();"/>
     </div>
