@@ -1,32 +1,45 @@
 #display {
     
     display: flex;    
-    width: 40vw;   
+    width: 40vw;
+    height: 40vw;   
     margin: auto;
-    justify-content: center;       
-    align-content: space-around; 
+    align-items: center;
+    justify-content: center;    
+    align-content: space-around;
     background-color: black;
+    border-radius: 10px;
     color: aqua;
-    font-size: 200%;
+    font-size: 6vw;
     font-family: 'Century Gothic';
           	
 }
 
+body {
+    background-color: rgb(86, 51, 119);
+}
+
 .container {
     border: 3px black solid;
+    border-radius: 10px;
     background-color: blueviolet;
-    height: 80%;
+    padding: 20px;
 }
 
 #clock {
+    display: flex;
+    justify-content: center;
     position: relative;
     margin:auto;
     height: 40vw;
     width: 40vw;
+    border: white 3px solid;
+    border-radius:10px;
 }
 
 canvas {
     width: 100%;
+    background-color: white;
 }
 
 #hours, #minutes, #seconds {
@@ -84,17 +97,28 @@ canvas {
     align-content: space-around;
     font-family: 'Century Gothic';
     padding-top: 10px;
+    align-items: center;
  }
 
  input {
-    padding: 20px;
-    margin: 10px;
+    width: 20vw;
+    padding: 10%;
+    margin: 5%;
     font-family: 'Century Gothic';
-    font-size: 20pt;
+    font-size: 150%;
     color: white;
-    background-color: rgb(165, 143, 184);
+    background-color: rgb(140, 83, 190);
+    border: white solid 3px;
+    border-radius: 5px;
+    height: 5%;
  }
 
  input:hover {
+    background-color: rgb(184, 103, 255);
+ }
 
+ input:disabled {
+    background-color: rgb(98, 65, 128);
+    color:rgb(152, 124, 179);
+    border-color:rgb(152, 124, 179);
  }
