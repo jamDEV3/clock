@@ -1,8 +1,13 @@
+body {
+    background-color: rgb(86, 51, 119);
+    font-family: 'Century Gothic';
+    color: white;
+}
+
 #display {
     
     display: flex;    
     width: 40vw;
-    height: 40vw;   
     margin: auto;
     align-items: center;
     justify-content: center;    
@@ -11,19 +16,32 @@
     border-radius: 10px;
     color: aqua;
     font-size: 6vw;
-    font-family: 'Century Gothic';
+    height: 40vw;
           	
 }
 
-body {
-    background-color: rgb(86, 51, 119);
-}
-
 .container {
+    display: flex;
+    flex-direction: row;
     border: 3px black solid;
     border-radius: 10px;
     background-color: blueviolet;
     padding: 20px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        padding-top: 50px;
+    }
+
+    #clock {
+        transform: scale(1.3,1.3);
+    }
+}
+
+h1 {
+    width: 120px;
 }
 
 #clock {
@@ -35,6 +53,12 @@ body {
     width: 40vw;
     border: white 3px solid;
     border-radius:10px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    min-width: 140px; 
 }
 
 canvas {
@@ -93,15 +117,15 @@ canvas {
 }
 
  .buttons {
-    display: flex;     
-    align-content: space-around;
+    display: flex;
     font-family: 'Century Gothic';
     padding-top: 10px;
     align-items: center;
+    margin: 20px;
  }
 
  input {
-    width: 20vw;
+    width: 25vw;
     padding: 10%;
     margin: 5%;
     font-family: 'Century Gothic';
@@ -110,7 +134,6 @@ canvas {
     background-color: rgb(140, 83, 190);
     border: white solid 3px;
     border-radius: 5px;
-    height: 5%;
  }
 
  input:hover {
